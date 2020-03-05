@@ -123,6 +123,9 @@ class calculatorController{
         console.log(this._toggleNumber);
 
         this._operation = value;
+    
+        this._displayNumberArray = [11,11,11,11,11,11,11];
+        this._render();
     }
 
     showResult(){
