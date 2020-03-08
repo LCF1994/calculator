@@ -124,6 +124,7 @@ class calculatorController{
 
         this._operation = value;
     
+        this._signal == 12 ? this._signal = 11 : this._signal = 11;
         this._displayNumberArray = [11,11,11,11,11,11,11];
         this._render();
     }
