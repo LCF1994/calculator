@@ -1,0 +1,92 @@
+/*Soft reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html{
+    font-size: 20px;
+}
+
+body{
+    background-color: black;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+}
+
+.calculator{
+    background-color: darkgray;
+
+    width: 90vw;
+    height: 80vh;
+    max-height: 100vh;
+
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+
+.display{
+    grid-template-columns: repeat(8, 10% 2.5%);
+
+    background-color: green;
+
+    height: 15vh;
+    width: 90%;
+
+    padding: .25rem;
+
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.digit{
+    background-color: greenyellow;
+    grid-template-columns: 25% auto auto 25%;
+    grid-template-rows: 10% auto 10% auto 10%;
+    grid-gap: .1rem;
+}
+
+.segment{
+    background-color: honeydew;
+}
+
+.segment:nth-child(3n+1){
+    background-color: hotpink;
+    grid-column: 1 / span 4;
+}
+
+.segment:nth-child(3){
+    grid-column: 4;
+}
+
+.segment:nth-child(6){
+    grid-column: 4;
+}
+
+.keys {
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5%;
+    width: 90%;
+}
+
+.keys button{
+    height: 3rem;
+    width: 3rem;
+}
+
+.keys button:last-child{
+    grid-column: 1 / span 4;
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
