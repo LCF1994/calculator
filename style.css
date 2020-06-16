@@ -26,6 +26,7 @@ body{
     background-color: darkgray;
 
     width: 90vw;
+    max-width: 600px;
     height: 80vh;
     max-height: 100vh;
 
@@ -36,52 +37,46 @@ body{
 
 
 .display{
-    grid-template-columns: repeat(8, 10% 2.5%);
+    grid-template-columns: repeat(8, 10%);
+    grid-template-rows: auto;
 
     background-color: green;
 
-    height: 15vh;
+    height: 20%;
     width: 90%;
 
     padding: .25rem;
 
     margin-top: .5rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .digit{
-    background-color: greenyellow;
-    grid-template-columns: 25% auto auto 25%;
-    grid-template-rows: 10% auto 10% auto 10%;
-    grid-gap: .1rem;
+    display: flex;
+    }
+
+.digit svg{
+    height: 100%;
 }
 
-.segment{
-    background-color: honeydew;
-}
-
-.segment:nth-child(3n+1){
-    background-color: hotpink;
-    grid-column: 1 / span 4;
-}
-
-.segment:nth-child(3){
-    grid-column: 4;
-}
-
-.segment:nth-child(6){
-    grid-column: 4;
-}
 
 .keys {
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 5%;
+    grid-template-columns: repeat(4, 23%);
+
+    grid-row-gap: 2%;
+    
+    justify-content: space-evenly;
+
     width: 90%;
+    height: 75%;
 }
 
 .keys button{
-    height: 3rem;
-    width: 3rem;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .keys button:last-child{
