@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: rgba(0, 240, 255, 0);
 }
 
 .flex{
@@ -131,11 +131,12 @@ body{
     transition: ease-in-out 1s, border-color .5s, color .5s;
 }
 
-.keys button:hover{
+.keys button:hover,
+.keys button:focus{
     color: goldenrod;
     border-color: goldenrod;
     box-shadow: 0 0 10px goldenrod;
-    
+    outline: none;
 }
 
 
@@ -148,11 +149,14 @@ body{
     color:goldenrod;
 }
 
+.keys button:nth-child(1):focus,
+.keys button:nth-child(2):focus,
 .keys button:nth-child(1):hover,
 .keys button:nth-child(2):hover {
     color:rgba(255, 45, 45, 0.95);
     border-color:rgba(255, 45, 45, 0.95);
     box-shadow: 0 0 10px rgba(255, 45, 45, 0.95);
+    outline: none;
 }
 
 .keys button:last-child{
