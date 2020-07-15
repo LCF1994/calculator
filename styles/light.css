@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: ease all 1s;
   }
 
 html{
@@ -95,6 +96,7 @@ body{
 .digit path{
     fill: dodgerblue;
     stroke: deepskyblue;
+    transition: ease .25s;
 }
 
 

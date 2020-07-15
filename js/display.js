@@ -1,12 +1,13 @@
 class Display{
-    constructor(target){
+    constructor(target, digitColour='dodgerblue'){
         this.target = Array.from(target)
+        
         this.onLoadMessage = ''
-        this.segmentColourOn = 'dodgerblue'
+        this.segmentColourOn = digitColour
         this.segmentColourOff = 'transparent'
 
         this.valid_keys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'E', 'r', 'o', '-']
-        this.SEGMENT_INDEX = {
+        this.segment_index = {
             // 0 = 1,2,3,5,6,7
             '0': [
                 this.segmentColourOff,  
@@ -165,6 +166,10 @@ class Display{
         }
     }
 
+    changeSegmentColour(colour){
+        this.segmentColourOn = colour
+    }
+
     _writeError() {
         this.write('Error')
     }
@@ -177,6 +182,7 @@ class Display{
         let inputTreated = this._inputTreatment(input)
         this._checkLength(inputTreated)
         this._writeSegments(inputTreated)
+        console.log(typeof this.segmentColourOn)
     }
 
     _inputTreatment(input){
@@ -210,6 +216,14 @@ class Display{
         })
     }
 
+    _clearSegments(segments){
+        segments.forEach(segment => {
+            segment.style.fill = this.segmentColourOff
+            segment.style.stroke = this.segmentColourOff
+        });
+    }
+
+
     _define_segments(target, state=null, dot=false) {
         /* Funciton: define_segments
 
@@ -228,10 +242,7 @@ class Display{
         const segments = target.querySelectorAll('path')
     
         /* Clear digit */
-        segments.forEach(segment => {
-            segment.style.fill = this.segmentColourOff
-            segment.style.stroke = this.segmentColourOff
-        });
+        this._clearSegments(segments)
     
         /* Setting digit with state received */
         if (state != null){
@@ -239,17 +250,15 @@ class Display{
     
             if (this.valid_keys.includes(key)){
                 segments.forEach((segment,i)=>{
-                    segment.style.fill = this.SEGMENT_INDEX[key][i]
+                    segment.style.fill = this.segment_index[key][i]
                 });
              }
-        }
-    
-        /* define if dot will be active or not */
-        // set dot as blue
-        if (dot) {      
-            segments[0].style.fill = this.segmentColourOn
-        }
+
+             /* define if dot will be active or not */
+            }
         
+        segments[0].style.fill = dot ? this.segmentColourOn : this.segmentColourOff
+    
         // No return
     
     } // End function define_segments
