@@ -80,7 +80,7 @@ body{
 
 .digit path{
     /*fill: darkgreen;*/
-    fill: rgb(0, 50, 0);
+    fill: #003200;
     stroke: black;
     transition: ease .5s;
 }

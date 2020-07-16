@@ -10,158 +10,158 @@ class Display{
         this.segment_index = {
             // 0 = 1,2,3,5,6,7
             '0': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,  
-                this.segmentColourOn,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                true,   
+                false,   
+                true,  
+                true,   
+                true 
             ],
             // 1 = 2,5
             '1': [
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOff,   
-                this.segmentColourOn,  
-                this.segmentColourOff,   
-                this.segmentColourOff 
+                false,  
+                false,   
+                true,   
+                false,   
+                false,   
+                true,  
+                false,   
+                false 
             ],
             // 2 = 1,3,4,5,7
             '2': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,  
-                this.segmentColourOff,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                false,   
+                true,   
+                true,   
+                true,  
+                false,   
+                true 
             ],
             
             // 3 = 1,2,4,5,7
             '3': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,  
-                this.segmentColourOff,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                false,   
+                true,   
+                true,  
+                false,   
+                true 
             ],
             // 4 = 2,4,5,6
             '4': [
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,  
-                this.segmentColourOn,   
-                this.segmentColourOff 
+                false,  
+                false,   
+                true,   
+                false,   
+                true,   
+                true,  
+                true,   
+                false 
             ],
             // 5 = 1,3,4,5,7
             '5': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,  
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                false,   
+                true,   
+                false,   
+                true,  
+                true 
             ],
             // 6 = 1,2,3,4,6,7
             '6': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                true,   
+                true,   
+                false,  
+                true,   
+                true 
             ],
             // 7 = 2,5,7
             '7': [
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOff,   
-                this.segmentColourOn,  
-                this.segmentColourOff,   
-                this.segmentColourOn 
+                false,  
+                false,   
+                true,   
+                false,   
+                false,   
+                true,  
+                false,   
+                true 
             ],
             // 8 = 1,2,3,4,5,6,7
             '8': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,  
-                this.segmentColourOn,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                true,   
+                true,   
+                true,  
+                true,   
+                true 
             ],
             // 9 = 1,2,4,5,6,7
             '9': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,  
-                this.segmentColourOn,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                true,   
+                false,   
+                true,   
+                true,  
+                true,   
+                true 
             ],
             // E = 1,3,4,6,7
             'E': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn 
+                false,  
+                true,   
+                false,   
+                true,   
+                true,   
+                false,  
+                true,   
+                true 
             ],
             // r = 3,4
             'r': [
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOff,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOff 
+                false,  
+                false,   
+                false,   
+                true,   
+                true,   
+                false,  
+                false,   
+                false 
             ],
             // o = 1,2,3,4
             'o': [
-                this.segmentColourOff,  
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOn,   
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOff 
+                false,  
+                true,   
+                true,   
+                true,   
+                true,   
+                false,  
+                false,   
+                false 
             ],
             // - = 4
             '-': [
-                this.segmentColourOff,  
-                this.segmentColourOff,   
-                this.segmentColourOff,   
-                this.segmentColourOff,   
-                this.segmentColourOn, 
-                this.segmentColourOff,   
-                this.segmentColourOff,  
-                this.segmentColourOff   
+                false,  
+                false,   
+                false,   
+                false,   
+                true, 
+                false,   
+                false,  
+                false   
             ]
         }
     }
@@ -223,43 +223,29 @@ class Display{
         });
     }
 
-
-    _define_segments(target, state=null, dot=false) {
-        /* Funciton: define_segments
-
-            inputs:
-                - target : digit which state will be applied
-                - state  : desired state for digit
-                - dot    : parameter used to inform dot's activeness
-
-            expected: 
-                - target : Div Element with digit svg child
-                - state  : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, E, r, o, -, null ]
-                - dot    : [ True, False ]
-            */
-
-        // Select all segments from target
-        const segments = target.querySelectorAll('path')
-    
-        /* Clear digit */
-        this._clearSegments(segments)
-    
-        /* Setting digit with state received */
-        if (state != null){
-            const key = state.toString()
-    
-            if (this.valid_keys.includes(key)){
-                segments.forEach((segment,i)=>{
-                    segment.style.fill = this.segment_index[key][i]
-                });
-             }
-
-             /* define if dot will be active or not */
-            }
-        
+    _setDot(segments, dot){
         segments[0].style.fill = dot ? this.segmentColourOn : this.segmentColourOff
+    }
+
+    _checkInputValit(value){
+        return this.valid_keys.includes(value)
+    }
     
-        // No return
+    _fillSegments(segments, key){
+        segments.forEach((segment,i)=>{
+            segment.style.fill = this.segment_index[key][i] ? this.segmentColourOn : this.segmentColourOff
+        }) 
+    }
+    
+    _define_segments(digit, state='', dot=false) {
+        const segments = digit.querySelectorAll('path')
+        const key = state.toString()
+    
+        this._clearSegments(segments)
+
+        this._checkInputValit(key) ? this._fillSegments(segments, key) : null
+        
+        this._setDot(segments, dot)
     
     } // End function define_segments
 }

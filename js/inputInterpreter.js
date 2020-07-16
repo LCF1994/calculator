@@ -7,7 +7,7 @@ function changeTheme(){
     }
     else{
         styleSheet.setAttribute("href", 'styles/classic.css')
-        calculatorDisplay.changeSegmentColour('#005000')
+        calculatorDisplay.changeSegmentColour('#003200')
     }
 }
 
@@ -18,10 +18,7 @@ function buttonListener(value){
 function keyboardListener(key) {
     console.log(key)
 
-    if ( key == 't' ) {
-        changeTheme()
-    }
-    return 'Not Implemented'
+    if ( key == 't' ) { changeTheme() }
 }
 
 function interpreter(number) {
