@@ -1,28 +1,28 @@
-function changeTheme(){
-    const styleSheet = document.getElementById("stylesheet")
-    
-    if (styleSheet.getAttribute('href') == "styles/classic.css"){
-        styleSheet.setAttribute("href", 'styles/light.css')
-        calculatorDisplay.changeSegmentColour('dodgeblue')
-    }
-    else{
-        styleSheet.setAttribute("href", 'styles/classic.css')
-        calculatorDisplay.changeSegmentColour('#003200')
-    }
-}
-
 function buttonListener(value){
-    return { value, type : typeof value }
+    interpreter(value)
 }
 
 function keyboardListener(key) {
-    console.log(key)
-
-    if ( key == 't' ) { changeTheme() }
+    interpreter(key)
 }
 
-function interpreter(number) {
+function interpreter(value) {
+    if ( value == 't' ) { changeTheme() }
+
+    if ( /[0-9]/.exec(value) ) { calculatorDisplay.write(CPU.inputNumber(value)) }
+
+    if ( value == '.' | value == ',' ) { CPU.setDot() }
     
+    if ( value == '+' ) { console.log('add pressed') }
+    if ( value == '-' ) { console.log('sub pressed') }
+    if ( value == '*' ) { console.log('mul pressed') }
+    if ( value == '/' ) { console.log('div pressed') }
+
+    if ( value == '=' | value == 'Enter' ) { console.log('result pressed') }
+    
+    if ( value == 'c' | value == 'Backspace' | value == 'clear' ) { calculatorDisplay.write(CPU.clear()) }
+    if ( value == 'C' | value == 'Escape' | value == 'reset' ) { console.log('reset pressed') }    
+
 }
 
 document.addEventListener('keydown', event => { keyboardListener(event.key) })
