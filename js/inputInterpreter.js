@@ -25,7 +25,7 @@ function interpreter(value) {
         calculatorDisplay.write(CPU.previusNumber)
     }
 
-    if ( value == 'inv' ) { console.log('inv pressed') }
+    if ( value == 'inv' ) { CPU.invert() }
     
     if ( value == 'c' | value == 'Backspace' | value == 'clear' ) { 
         calculatorDisplay.write(CPU.clear()) 
@@ -34,7 +34,6 @@ function interpreter(value) {
     if ( value == 'C' | value == 'Escape' | value == 'reset' ) {
         CPU.reset()
         calculatorDisplay.clear()
-         //console.log('reset pressed') 
         }    
 
 }

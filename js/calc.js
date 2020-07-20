@@ -47,7 +47,6 @@ class Calculator {
     }
 
     _calc(value){
-        //console.log(value)
         return this.ARITHMETICS[value](this.previusNumber, this.currentNumber)
     }
 
@@ -59,17 +58,19 @@ class Calculator {
         this.previusNumber = this._calc(value)  
 
         this.currentNumber = ''
+        this.dot = false
     }
 
     result(){
-        this.previusNumber = this._calc(this.arithmetics)
+        if ( this.previusNumber != '' ) {
+            this.previusNumber = this._calc(this.arithmetics)   
+            this.dot = false
+        }
     }
 
     invert(){
         this.currentNumber *= -1
     }
-
-    //reset dot will be performed internaly
 
     clear(){
         this.currentNumber = ''

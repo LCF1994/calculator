@@ -182,7 +182,7 @@ class Display{
         let inputTreated = this._inputTreatment(input)
         this._checkLength(inputTreated)
         this._writeSegments(inputTreated)
-        console.log(typeof this.segmentColourOn)
+        //console.log(typeof this.segmentColourOn)
     }
 
     _inputTreatment(input){
